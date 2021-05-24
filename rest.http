@@ -1,0 +1,26 @@
+###
+
+POST  http://localhost:8000/api/login
+Content-Type: application/json
+
+{
+    "email":"rhea.ardiente@mlhuillier.com",
+    "password": "rhea2021"
+}
+
+###
+POST http://localhost:8000/api/emails
+Content-Type: application/json
+Authorization: Bearer 2|gXEeQbxYS6hp7J7wSjlcSdAc7RuKP02V41XOL18s
+
+{
+    "user_id": 1,
+    "emails": ["aparece@gmail.com1",
+                "aparece@gmail.com2",
+                "aparece@gmail.com3",
+                "aparece@gmail.com4",
+                "aparece@gmail.com5",
+                "aparece@gmail.com6",
+                "aparece@gmail.com7"
+                ]
+}
