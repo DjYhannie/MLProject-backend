@@ -4,21 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Forms;
 use Illuminate\Http\Request;
-
-class FormsController extends Controller
-{
-    <?php
-
-namespace App\Http\Controllers;
-
-use App\Models\Forms;
-use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Notifications\Notifiable;
 
 class FormsController extends Controller
 {
+    use Notifiable;
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -27,6 +30,7 @@ class FormsController extends Controller
     public function addDataForms(Request $request)
     {
         $user = Auth::user();
+        dd($user);
         $validator = Validator::make($request->all(),[
             'question1' => 'required',
             'question2' => 'required',
@@ -62,4 +66,4 @@ class FormsController extends Controller
         return response($response);
     }
 }
-}
+

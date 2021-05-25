@@ -11,16 +11,51 @@ Content-Type: application/json
 ###
 POST http://localhost:8000/api/emails
 Content-Type: application/json
-Authorization: Bearer 2|gXEeQbxYS6hp7J7wSjlcSdAc7RuKP02V41XOL18s
+Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
 
 {
-    "user_id": 1,
-    "emails": ["aparece@gmail.com1",
-                "aparece@gmail.com2",
-                "aparece@gmail.com3",
-                "aparece@gmail.com4",
-                "aparece@gmail.com5",
-                "aparece@gmail.com6",
-                "aparece@gmail.com7"
+    "emails": ["rhea.ardiente@mlhuillier.com",
+                "quency.atacador@mlhuillier.com",
+                "jonalyn.mobilla@mlhuillier.com",
+                "shenna.caneda@mlhuillier.com",
+                "reina.mates@mlhuillier.com",
+                "jenie.tomalon@mlhuillier.com"
                 ]
 }
+
+###
+GET http://localhost:8000/api/email
+Content-Type: application/json
+Authorization: Bearer 1|C9KQpLkU6buLsyjTGntlDo61aI0XhtYVmw5iyd1E
+
+
+###
+POST http://localhost:8000/api/forms
+
+# POST  https://mlback-end.herokuapp.com/api/forms
+Content-Type: application/json
+Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
+
+{
+    "question1": "This is a test",
+    "question2": "I am Beautitful",
+    "question3": "Life is Challenging",
+    "category1": "Good",
+    "category2": "Fair",
+    "category3": "Good",
+    "category4": "Fair",
+    "category5": "Outstanding",
+    "category6": "Poor",
+    "category7": "Fair",
+    "category8": "Good",
+    "category9": "Good",
+    "category10": "Good"
+}
+
+###
+
+GET http://localhost:8000/api/response
+Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
+
+
+

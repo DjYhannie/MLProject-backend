@@ -16,6 +16,7 @@ class CreateEmailRandomizersTable extends Migration
         Schema::create('email_randomizers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->string('user_name');
             $table->json('emails');
             $table->timestamps();
         });

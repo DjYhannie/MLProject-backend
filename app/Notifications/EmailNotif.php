@@ -6,6 +6,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class EmailNotif extends Notification
 {
@@ -20,7 +23,7 @@ class EmailNotif extends Notification
      */
     public function __construct()
     {
-       
+
     }
 
     /**
@@ -43,7 +46,7 @@ class EmailNotif extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->greeting('Test')
+                    ->greeting("Hi Good Day")
                     ->line('Test')
                     ->line('Thank You');
     }

@@ -41,13 +41,14 @@ class EmailRandomizerController extends Controller
     }
 
 
-    //query to get all selected emails and randomize
+    //query to get all selected emails and randomize and then notify
     public function selectedMails(Request $request)
     {
         $user = Auth::user();
         $emails =  EmailRandomizer::randomizedEmails($request);
         $randomizedEmail = EmailRandomizer::create([
             "user_id" => $user->id,
+            "user_name" => $user->name,
             "emails" => json_encode($emails)
             ]);
 
@@ -56,48 +57,11 @@ class EmailRandomizerController extends Controller
             $user = User::where('email',$email)->first();
             $user->notify(new EmailNotif());
         }
-       
+
         return response()->json($randomizedEmail);
     }
 
 
-    //query to send mail --not yet final
-    // public function sendEmail()
-    // {
-    //     $user = Auth::user();
-    //    $details = [
-    //        'title' => " Title: Email Test Connection",
-    //        'body' => "Body: This is a test"
-    //    ];
 
-    //    $emails = $this->selectedMails();
-    //    Mail::mailer('sendgrid')
-
-    //         ->to($emails)
-    //         ->send(new Email($details));
-    //         return "done";
-
-    //    Mail::to("rhea0951@gmail.com")->send(new Email($details));
-    //    return "Email Sent";
-    // }
-
-    public function sendTestNotification()
-    {
-        $user = Auth::user();
-        // $user = User::first();
-
-        $emailData = [
-            'greeting' => 'Greeting test',
-            'body' => 'This a test',
-            'emailText' => 'Please fill up',
-            'url' => url('/'),
-            'thankyou' => 'You are mine'
-        ];
-
-        // $user->notify(new EmailNotif($emailData));
-        Notification::send($user, new EmailNotif($emailData));
-
-        dd('$emailData');
-    }
 
 }

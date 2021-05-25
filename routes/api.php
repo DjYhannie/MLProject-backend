@@ -1,10 +1,11 @@
 <?php
 
-
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EmailRandomizerController;
+use App\Http\Controllers\FormsController;
 
 
 /*
@@ -36,6 +37,7 @@ Route::middleware('auth:sanctum')->group(function(){
 
     //Admin
     Route::post('/adminforms', [AdminController::class, 'adminSelectedMails']);
+    Route::get('/response', [AdminController::class, 'getResposes']);
 
 
 
