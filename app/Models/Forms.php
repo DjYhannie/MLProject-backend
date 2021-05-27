@@ -10,6 +10,8 @@ class Forms extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
+        'user_name',
         'question1',
         'question2',
         'question3',

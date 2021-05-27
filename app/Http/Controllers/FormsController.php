@@ -51,14 +51,13 @@ class FormsController extends Controller
         $response = [];
         try{
             // $data = Forms::create($request->all());
-            $data = Forms::create(
-                $request->all(),
-                ["user_id" => Auth::id(),
-                "user_name" => $user->name
-            ]);
+            $sender = $request->all();
+            $sender['user_id'] = $user->id;
+            $sender['user_name'] =  $user->name;
+            $data = Forms::create($sender);
             $response['status_code'] = 200;
             $response['message'] = 'success';
-            $response['data'] = $data;
+            $response['data'] = $sender;
         } catch (\Exception $e) {
             $response['status_code'] = 400;
             $response['message'] = $e->getMessage();
