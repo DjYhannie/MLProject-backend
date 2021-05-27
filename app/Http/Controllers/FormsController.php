@@ -12,6 +12,8 @@ use Illuminate\Notifications\Notifiable;
 class FormsController extends Controller
 {
     use Notifiable;
+
+
     /**
      * Display a listing of the resource.
      *
@@ -22,15 +24,9 @@ class FormsController extends Controller
     // {
     //     $this->middleware('auth');
     // }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function addDataForms(Request $request)
     {
         $user = Auth::user();
-        dd($user);
         $validator = Validator::make($request->all(),[
             'question1' => 'required',
             'question2' => 'required',

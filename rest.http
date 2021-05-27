@@ -30,11 +30,14 @@ Authorization: Bearer 1|C9KQpLkU6buLsyjTGntlDo61aI0XhtYVmw5iyd1E
 
 
 ###
-POST http://localhost:8000/api/forms
-
-# POST  https://mlback-end.herokuapp.com/api/forms
-Content-Type: application/json
+GET http://localhost:8000/api/response
 Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
+
+
+###
+
+POST http://localhost:8000/api/forms
+Content-Type: application/json
 
 {
     "question1": "This is a test",
@@ -51,11 +54,3 @@ Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
     "category9": "Good",
     "category10": "Good"
 }
-
-###
-
-GET http://localhost:8000/api/response
-Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
-
-
-
