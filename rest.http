@@ -38,6 +38,7 @@ Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
 
 POST http://localhost:8000/api/forms
 Content-Type: application/json
+Authorization: Bearer 1|YDXnVLssYJA37QvkFmkBA45Gwy5eHPLU5dKfm4RP
 
 {
     "question1": "This is a test",

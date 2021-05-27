@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Notifications\Notifiable;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 class FormsController extends Controller
 {
@@ -49,7 +50,12 @@ class FormsController extends Controller
 
         $response = [];
         try{
-            $data = Forms::create($request->all());
+            // $data = Forms::create($request->all());
+            $data = Forms::create(
+                $request->all(),
+                ["user_id" => Auth::id(),
+                "user_name" => $user->name
+            ]);
             $response['status_code'] = 200;
             $response['message'] = 'success';
             $response['data'] = $data;
@@ -63,3 +69,5 @@ class FormsController extends Controller
     }
 }
 
+// "user_id" => Auth::id(),
+// "user_name" => $user->name,
