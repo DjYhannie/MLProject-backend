@@ -55,3 +55,59 @@ Authorization: Bearer 2|hkR8g3vBKPgeCzrQ7Lwzl0QOwSISRvWYILMaHtRQ
     "category9": "Good",
     "category10": "Good"
 }
+
+
+
+
+// Deployed Testing
+
+//LOGIN
+
+###
+POST https://mlproject-backend.herokuapp.com/api/login
+Content-Type: application/json
+
+{
+    "email" : "rhea.ardiente@mlhuillier.com",
+    "password": "rhea2021"
+}
+
+###
+POST https://mlproject-backend.herokuapp.com/api/emails
+Content-Type: application/json
+Authorization: Bearer 1|nviU5a1voq9u6pqz8JtmARozo01c2tMCocxT8wqx
+
+{
+    "emails": ["rhea.ardiente@mlhuillier.com",
+                "quency.atacador@mlhuillier.com",
+                "jonalyn.mobilla@mlhuillier.com",
+                "shenna.caneda@mlhuillier.com",
+                "reina.mates@mlhuillier.com",
+                "jenie.tomalon@mlhuillier.com"
+                ]
+}
+
+###
+POST https://mlproject-backend.herokuapp.com/api/forms
+Content-Type: application/json
+Authorization: Bearer 1|nviU5a1voq9u6pqz8JtmARozo01c2tMCocxT8wqx
+
+{
+    "question1": "This is a test",
+    "question2": "I am Beautitful",
+    "question3": "Life is Challenging",
+    "category1": "Good",
+    "category2": "Fair",
+    "category3": "Good",
+    "category4": "Fair",
+    "category5": "Outstanding",
+    "category6": "Poor",
+    "category7": "Fair",
+    "category8": "Good",
+    "category9": "Good",
+    "category10": "Good"
+}
+
+###
+GET https://mlproject-backend.herokuapp.com/api/response
+Authorization: Bearer 1|nviU5a1voq9u6pqz8JtmARozo01c2tMCocxT8wqx
