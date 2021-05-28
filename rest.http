@@ -11,7 +11,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8000/api/emails
 Content-Type: application/json
-Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
+Authorization: Bearer 2|hkR8g3vBKPgeCzrQ7Lwzl0QOwSISRvWYILMaHtRQ
 
 {
     "emails": ["rhea.ardiente@mlhuillier.com",
@@ -38,7 +38,7 @@ Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
 
 POST http://localhost:8000/api/forms
 Content-Type: application/json
-Authorization: Bearer 1|wcbQKu757aBU8lElvKgzmOGgdEh7o7gHjDaQ5oP0
+Authorization: Bearer 2|hkR8g3vBKPgeCzrQ7Lwzl0QOwSISRvWYILMaHtRQ
 
 {
     "question1": "This is a test",
