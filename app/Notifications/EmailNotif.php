@@ -45,10 +45,16 @@ class EmailNotif extends Notification
      */
     public function toMail($notifiable)
     {
+        $user = Auth::user();
+        $sender['user_name'] = $user->name;
+        $url = "http://localhost:4200/";
         return (new MailMessage)
                     ->greeting("Hi Good Day")
-                    ->line('Test')
+                    ->line('You are task to give Feedback to '.$sender)
+                    ->line('Please click the button below')
+                    ->action('Evaluation Now', $url)
                     ->line('Thank You');
+
     }
 
     /**
