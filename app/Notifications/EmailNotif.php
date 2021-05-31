@@ -21,9 +21,9 @@ class EmailNotif extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($sender)
     {
-
+        return $sender;
     }
 
     /**
@@ -46,11 +46,10 @@ class EmailNotif extends Notification
     public function toMail($notifiable)
     {
         $user = Auth::user();
-        $sender['user_name'] = $user->name;
         $url = "http://localhost:4200/";
         return (new MailMessage)
                     ->greeting("Hi Good Day")
-                    ->line('You are task to give Feedback to '.$sender)
+                    ->line('You are task to give Feedback to')
                     ->line('Please click the button below')
                     ->action('Evaluation Now', $url)
                     ->line('Thank You');

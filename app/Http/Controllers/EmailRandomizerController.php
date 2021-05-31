@@ -45,6 +45,7 @@ class EmailRandomizerController extends Controller
     public function selectedMails(Request $request)
     {
         $user = Auth::user();
+        $sender['user_name'] = $user->name;
         $emails =  EmailRandomizer::randomizedEmails($request);
         $randomizedEmail = EmailRandomizer::create([
             "user_id" => $user->id,
@@ -55,7 +56,7 @@ class EmailRandomizerController extends Controller
         $randomizedEmail->emails = json_decode($randomizedEmail->emails);
         foreach ($randomizedEmail->emails as $email) {
             $user = User::where('email',$email)->first();
-            $user->notify(new EmailNotif());
+            $user->notify(new EmailNotif($sender));
         }
 
         return response()->json($randomizedEmail);

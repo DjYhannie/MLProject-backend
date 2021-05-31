@@ -11,12 +11,12 @@ Content-Type: application/json
 ###
 POST http://localhost:8000/api/emails
 Content-Type: application/json
-Authorization: Bearer 1|nUJkBI8OlCuBYMNcusY6s1Cgj8fVUSVmNnfw78PP
+Authorization: Bearer 4|mmRV5944AlPpshXfIHkDCtpwQMBA9wOvsh4zKnv4
 
 {
     "emails": ["rhea.ardiente@mlhuillier.com",
                 "quency.atacador@mlhuillier.com",
-                "romeo.rodemio@gmail.com",
+                "jenie.tomalon@mlhuillier.com",
                 "shenna.caneda@mlhuillier.com",
                 "reina.mates@mlhuillier.com",
                 "rhea0951@gmail.com"
@@ -38,7 +38,7 @@ Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
 
 POST http://localhost:8000/api/forms
 Content-Type: application/json
-Authorization: Bearer 2|hkR8g3vBKPgeCzrQ7Lwzl0QOwSISRvWYILMaHtRQ
+Authorization: Bearer 4|mmRV5944AlPpshXfIHkDCtpwQMBA9wOvsh4zKnv4
 
 {
     "question1": "This is a test",
