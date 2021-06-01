@@ -14,7 +14,7 @@ class EmailNotif extends Notification
 {
     use Queueable;
     private $emailData;
-
+    private $sender;
 
     /**
      * Create a new notification instance.
@@ -23,7 +23,7 @@ class EmailNotif extends Notification
      */
     public function __construct($sender)
     {
-        return $sender;
+        $this->sender = $sender;
     }
 
     /**
@@ -45,11 +45,10 @@ class EmailNotif extends Notification
      */
     public function toMail($notifiable)
     {
-        $user = Auth::user();
         $url = "http://localhost:4200/";
         return (new MailMessage)
                     ->greeting("Hi Good Day")
-                    ->line('You are task to give Feedback to')
+                    ->line('You are task to give Feedback to '.$this->sender)
                     ->line('Please click the button below')
                     ->action('Evaluation Now', $url)
                     ->line('Thank You');

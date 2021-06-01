@@ -11,7 +11,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8000/api/emails
 Content-Type: application/json
-Authorization: Bearer 4|mmRV5944AlPpshXfIHkDCtpwQMBA9wOvsh4zKnv4
+Authorization: Bearer 2|IJBrkgbf7MTC18HRa3dSoavELd9Z2hOExbgA7nXu
 
 {
     "emails": ["rhea.ardiente@mlhuillier.com",
