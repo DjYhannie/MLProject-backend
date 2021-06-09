@@ -77,7 +77,7 @@ Content-Type: application/json
 ###
 POST https://mlproject-backend.herokuapp.com/api/emails
 Content-Type: application/json
-Authorization: Bearer 1|LsXA2xIY0UO7niWttbkiuDvTKVBglGr9iWHqgrNv
+Authorization: Bearer 3|dUReaXRZypFF0iKGmYCQXg8y7up44ZX5KI5G1m0u
 
 {
     "emails": ["rhea.ardiente@mlhuillier.com",
