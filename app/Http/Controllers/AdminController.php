@@ -27,13 +27,23 @@ class AdminController extends Controller
         return response()->json($randomizedEmail);
     }
 
-    //query to get the responses
-    public function getResposes()
+    //query to get the responses of the selected emails
+    //to give Evalutation
+    public function getRandomizedEmails()
     {
+        $user = Auth::user();
         $responses = DB::table('email_randomizers')->get();
-        return response()->json($responses);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+        return response()->json($responses);
     }
 
+    //query to get the datas of the responses of the Evaluation
+    public function getEvaluationResponse()
+    {
+        $user = Auth::user();
+        $result = DB::table('forms')->get();
+        return response()->json($result);
+    }
 
+    
 
 }

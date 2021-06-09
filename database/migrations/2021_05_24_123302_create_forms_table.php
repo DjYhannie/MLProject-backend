@@ -17,6 +17,7 @@ class CreateFormsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('user_name')->nullable();
+            $table->string('name');
             $table->longText('question1');
             $table->longText('question2');
             $table->longText('question3');

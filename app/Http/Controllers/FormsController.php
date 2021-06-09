@@ -29,6 +29,7 @@ class FormsController extends Controller
     {
         $user = Auth::user();
         $validator = Validator::make($request->all(),[
+            'name' => 'required',
             'question1' => 'required',
             'question2' => 'required',
             'question3' => 'required',

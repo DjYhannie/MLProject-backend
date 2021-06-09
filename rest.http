@@ -11,7 +11,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8000/api/emails
 Content-Type: application/json
-Authorization: Bearer 2|IJBrkgbf7MTC18HRa3dSoavELd9Z2hOExbgA7nXu
+Authorization: Bearer 1|N5W2kaOHEUFsGihN26IHrhXAT7F4aZOuGHrcdWIP
 
 {
     "emails": ["rhea.ardiente@mlhuillier.com",
@@ -38,9 +38,10 @@ Authorization: Bearer 2|hdvbEV3qTokw50QYMpPZbtCZOFBE45Qk3So6NvR0
 
 POST http://localhost:8000/api/forms
 Content-Type: application/json
-Authorization: Bearer 4|mmRV5944AlPpshXfIHkDCtpwQMBA9wOvsh4zKnv4
+Authorization: Bearer 1|N5W2kaOHEUFsGihN26IHrhXAT7F4aZOuGHrcdWIP
 
 {
+    "name": "Reina Mates",
     "question1": "This is a test",
     "question2": "I am Beautitful",
     "question3": "Life is Challenging",
@@ -56,8 +57,9 @@ Authorization: Bearer 4|mmRV5944AlPpshXfIHkDCtpwQMBA9wOvsh4zKnv4
     "category10": "Good"
 }
 
-
-
+###
+GET http://localhost:8000/api/admin/result
+Authorization: Bearer 1|N5W2kaOHEUFsGihN26IHrhXAT7F4aZOuGHrcdWIP
 
 // Deployed Testing
 
@@ -90,9 +92,10 @@ Authorization: Bearer 1|LsXA2xIY0UO7niWttbkiuDvTKVBglGr9iWHqgrNv
 ###
 POST https://mlproject-backend.herokuapp.com/api/forms
 Content-Type: application/json
-Authorization: Bearer 1|nviU5a1voq9u6pqz8JtmARozo01c2tMCocxT8wqx
+Authorization: Bearer 10|6FMvuCbQwqUUl6NPJ0pYfscZT2pDtpOUqt5mnTay
 
 {
+    "name": "Reina Mates",
     "question1": "This is a test",
     "question2": "I am Beautitful",
     "question3": "Life is Challenging",
@@ -110,4 +113,5 @@ Authorization: Bearer 1|nviU5a1voq9u6pqz8JtmARozo01c2tMCocxT8wqx
 
 ###
 GET https://mlproject-backend.herokuapp.com/api/response
-Authorization: Bearer 1|nviU5a1voq9u6pqz8JtmARozo01c2tMCocxT8wqx
+Authorization: Bearer 10|6FMvuCbQwqUUl6NPJ0pYfscZT2pDtpOUqt5mnTay
+
